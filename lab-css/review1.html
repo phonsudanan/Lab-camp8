@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review 1</title>
+    <style>
+        table,th,td{ border: 1px solid black; } 
+        table{ border-collapse: collapse;width: 100%;}
+        th {height: 30px;text-align: center;background-color:LightBlue;}
+        td {padding: 3px 13px;}
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <h3>CSS syntax ประกอบด้วยอะไรบ้าง</h3>
+            <thead>
+                <tr>
+                    <th>selector</th>
+                    <th>property</th>
+                    <th>value</th>
+                </tr>
+            </thead>
+                <tbody>
+                <tr>
+                    <td>ส่วน HTML tag ที่เราต้องการจะให้แสดงผล เช่น &lt;table&gt; ก็จะแสดงผลในส่วนของตาราง</td>
+                    <td>ส่วนของคุณสมบัติที่เราต้องการให้แสดง เช่น สีตัวอักษร , ชนิดตัวอักษร , ขนาดตัวอักษร</td>
+                    <td>ค่าที่เราต้องการให้แสดง เช่น ตัวอักษรสีแดง , ตัวอักษรแบบ tahoma , ตัวอักษรขนาด 12 pt</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table>
+            <h3>การเขียน CSS มีกี่แบบอะไรบ้าง</h3>
+            <thead>
+                <tr>
+                    <th>Inline Style Sheet</th>
+                    <th>Embed Style Sheet</th>
+                    <th>External Style Sheet</th>
+                </tr>
+            </thead>
+                <tbody>
+                <tr>
+                    <td>การเขียนแทรกลงไปในบรรทัดนั้นๆ ของ tag HTML เลย</td>
+                    <td>การเขียนแบบ Internal (embedded) คือเขียนแยก CSS ออกจาก tag  HTML 
+                        แต่อยู่ในหน้าเดียวกันกับไฟล์  HTML โดยแทรก css เอาไว้ที่ &lt;head&gt&lt;/head&gt</td>
+                    <td>การเขียน แยก css ออกมาเป็นไฟล์ .css ต่างหาก แล้วนำเข้าไปใช้ใน หน้าเว็บด้วย 
+                        การเรียกโดย ใช้ โดยการพิมพ์ &lt;link rel="stylesheet" href="externalcss.css" type="text/css" /&lt; ไว้ที่ส่วน  &lt;head&gt&lt;/head&gt</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <h3>selector มีกี่แบบอะไรบ้าง</h3>
+            <thead>
+                <tr>
+                    <th>Class Selectors</th>
+                    <th>ID Selectors</th>
+                    <th>TAG Selectors</th>
+                </tr>
+            </thead>
+                <tbody>
+                <tr>
+                    <td>Selector ที่เราต้องกำหนดชื่อของ Selector ขึ้นมาเอง <br>
+                        การเรียกใช้งานต้องระบุชื่อ Class Selectors 
+                        ให้กับ Tag ของ HTML จึงจะสามารถใช้งานคุณสมบัติของ Class ที่ได้สร้างไว้ได้ <br>
+                        วิธีการเขียน Class Selector :  <br>
+                        เขียนได้โดยการ ตั้งชื่อ Selector ไว้หลังเครื่องหมายจุด หรือ Dot ( . ) จากนั้นตามด้วยกลุ่มของ Properties 
+                        </td>
+                    <td>Selector ที่อ้างอิงกับ Attribute ที่ชื่อว่า ID ซึ่งเขียนอยู่ภายใน Tag ของ HTML  <br>
+                        โดยที่ Tag ของ HTML ใดมี ID ซึ่งตรงกับ ID Selectors ที่กำหนด คุณสมบัติของ CSS ที่กำหนดไว้กับ Selector ก็จะมีผลต่อ Tag นั้น <br>
+                        วิธีการเขียน ID Selector :  <br>
+                        การเขียน ID Selectors เราสามารถเขียนได้โดยการเขียนชื่อ Selector ตามหลังเครื่องหมายชาร์ป (# )</td>
+                    <td>TAG Selectors อ้างอิงกับชื่อ Tag ของ HTML โดยตรง เช่น &lt;p&gt; หมายความว่า ถ้าหากกำหนดคุณสมบัติให้แก่ TAG Selectors นี้แล้ว Tag ของ HTML ที่มีชื่อเดียวกับ Selectors นี้
+                        จะมีคุณสมบัติของ CSS เหมือนกันหมดทุก Tag ภายในเว็บเพจนั้น  <br>
+                        วิธีการเขียน TAG Selector :  <br>
+                        การเขียน TAG Selectors เราสามารถเขียนได้โดยการเขียนชื่อ TAG ของ HTML ลงไปโดยตรงหน้าเครื่องหมายปีกกา { ..... }  <br>
+                        วิธีการเรียกใช้งาน TAG Selector :  <br>
+                        การใช้งาน Selector ชนิดนี้เราไม่จำเป็นต้องมีการเรียกใช้งาน เนื่องจาก เมื่อจุดใดที่เว็บเพจมีการเรียกใช้งาน Tag ของ HTML 
+                        ที่สัมพันธ์กับ Tag Selectors ที่กำหนดไว้ คุณสมบัติของ CSS ก็จะถูกกำหนดให้แก่ Tag นั้นโดยอัตโนมัติ </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table>
+            <h3>combinator มีกี่แบบอะไรบ้าง</h3>
+            <thead>
+                <tr>
+                    <th>descendant selector (space)</th>
+                    <th>child selector (>)</th>
+                    <th>adjacent sibling selector (+)</th>
+                    <th>general sibling selector (~)</th>
+                </tr>
+            </thead>
+                <tbody>
+                <tr>
+                    <td> a b = tag b ทั้งหมดที่อยู่ใน a </td>
+                    <td> a > b = tag b ที่เป็นลูกของ a </td>
+                    <td> a + b = tag b ที่อยู่ล่าง a และติดกับ a เท่านั้น </td>
+                    <td> a ~ b = tag b ที่อยู่ล่าง a ทุก tag เช่น h1~p { } คือ ให้กระทำการใดๆ กับ p ที่อยู่หลัง h1 ไม่ว่าจะอยู่ในลำดับที่เท่าไร </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
