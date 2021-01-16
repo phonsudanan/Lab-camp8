@@ -14,25 +14,31 @@
 
         table {
             border-collapse: collapse;
+            table-layout: fixed;
             width: 100%;
         }
 
         th {
             height: 30px;
-            text-align: center;
+            font-size: 18px;
             background-color: LightBlue;
         }
 
         td {
             padding: 3px 13px;
-        }
-
-        .adjacent {
-            margin-left: 100px;
+            vertical-align: top;
         }
 
         h4 {
             text-decoration: underline;
+        }
+
+        .sample {
+            margin-left: 100px;
+        }
+
+        ul+p {
+            color: red;
         }
     </style>
 </head>
@@ -40,103 +46,85 @@
 <body>
     <div>
         <table>
-            <h3>CSS syntax ประกอบด้วยอะไรบ้าง</h3>
+            <h3></h3>
             <thead>
                 <tr>
+                    <th>CSS syntax ประกอบด้วย</th>
+                    <th>การเขียน CSS</th>
                     <th>selector</th>
-                    <th>property</th>
-                    <th>value</th>
+                    <th>combinator</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Selector คือ ส่วน HTML tag ที่เราต้องการจะให้แสดงผล เช่น &lt;table&gt; ก็จะแสดงผลในส่วนของตาราง
+                    <td>
+                        <p>Selector คือ ส่วน HTML tag ที่เราต้องการจะให้แสดงผล เช่น &lt;table&gt;
+                            ก็จะแสดงผลในส่วนของตาราง</p>
+                        <p>Property คือ ส่วนของคุณสมบัติที่เราต้องการให้แสดง เช่น สีตัวอักษร , ชนิดตัวอักษร ,
+                            ขนาดตัวอักษร</p>
+                        <p>Value คือ ค่าที่เราต้องการให้แสดง เช่น ตัวอักษรสีแดง , ตัวอักษรแบบ tahoma , ตัวอักษรขนาด 12
+                            pt</p>
                     </td>
-                    <td>Property คือ ส่วนของคุณสมบัติที่เราต้องการให้แสดง เช่น สีตัวอักษร , ชนิดตัวอักษร , ขนาดตัวอักษร
+
+                    <td>
+                        <p>Inline Style Sheet การเขียนแทรกลงไปในบรรทัดนั้นๆ ของ tag HTML เลย</p>
+                        <p>Embed Style Sheet การเขียนแบบ Internal (embedded) คือเขียนแยก CSS ออกจาก tag HTML
+                            แต่อยู่ในหน้าเดียวกันกับไฟล์ HTML โดยแทรก css เอาไว้ที่ &lt;head&gt&lt;/head&gt</p>
+                        <p>External Style Sheet การเขียน แยก css ออกมาเป็นไฟล์ .css ต่างหาก แล้วนำเข้าไปใช้ใน
+                            หน้าเว็บด้วย
+                            การเรียกโดย ใช้ โดยการพิมพ์ &lt;link rel="stylesheet" href="externalcss.css" type="text/css"
+                            /&lt; ไว้ที่ส่วน &lt;head&gt&lt;/head&gt</p>
                     </td>
-                    <td>Value คือ ค่าที่เราต้องการให้แสดง เช่น ตัวอักษรสีแดง , ตัวอักษรแบบ tahoma , ตัวอักษรขนาด 12 pt
+
+                    <td>
+                        <p>ID Selectors การกำหนดชื่อของ element โดยจะมีได้แค่ element เดียวเท่านั้น
+                            สามารถเขียนได้โดยการเขียนชื่อ Selector ตามหลังเครื่องหมายชาร์ป (#)</p>
+                        <p>Class Selectors การกำหนดชื่อของ element โดยสามารถมีได้หลาย element
+                            เขียนได้โดยการ ตั้งชื่อ Selector ไว้หลังเครื่องหมายจุด หรือ Dot (.)</p>
+                        <p>TAG Selectors TAG Selectors อ้างอิงกับชื่อ Tag ของ HTML โดยตรง เช่น &lt;p&gt; หมายความว่า
+                            ถ้าหากกำหนดคุณสมบัติให้แก่ TAG Selectors นี้แล้ว Tag ของ HTML ที่มีชื่อเดียวกับ Selectors
+                            นี้
+                            จะมีคุณสมบัติของ CSS เหมือนกันหมดทุก Tag ภายในเว็บเพจนั้น
+                            การเขียน TAG Selectors เราสามารถเขียนได้โดยการเขียนชื่อ TAG ของ HTML
+                            ลงไปโดยตรงหน้าเครื่องหมายปีกกา { ..... }</p>
                     </td>
+
+                    <td>
+                        <p>descendant selector (space) <br> a b = tag b ทั้งหมดที่อยู่ใน a </p>
+                        <p>child selector (>) <br> a > b = tag b ที่เป็นลูกของ a</p>
+                        <p>adjacent sibling selector (+) <br> a + b = tag b ที่อยู่ล่าง a และติดกับ a เท่านั้น</p>
+                        <p>general sibling selector (~) <br> a ~ b = tag b ที่อยู่ล่าง a ทุก tag เช่น h1~p { } คือ
+                            ให้กระทำการใดๆ กับ p ที่อยู่หลัง h1
+                            ไม่ว่าจะอยู่ในลำดับที่เท่าไร</p>
+                    </td>
+
                 </tr>
             </tbody>
         </table>
 
 
-        <table>
-            <h3>การเขียน CSS มีกี่แบบอะไรบ้าง</h3>
-            <thead>
-                <tr>
-                    <th>Inline Style Sheet</th>
-                    <th>Embed Style Sheet</th>
-                    <th>External Style Sheet</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>การเขียนแทรกลงไปในบรรทัดนั้นๆ ของ tag HTML เลย</td>
-                    <td>การเขียนแบบ Internal (embedded) คือเขียนแยก CSS ออกจาก tag HTML
-                        แต่อยู่ในหน้าเดียวกันกับไฟล์ HTML โดยแทรก css เอาไว้ที่ &lt;head&gt&lt;/head&gt</td>
-                    <td>การเขียน แยก css ออกมาเป็นไฟล์ .css ต่างหาก แล้วนำเข้าไปใช้ใน หน้าเว็บด้วย
-                        การเรียกโดย ใช้ โดยการพิมพ์ &lt;link rel="stylesheet" href="externalcss.css" type="text/css"
-                        /&lt; ไว้ที่ส่วน &lt;head&gt&lt;/head&gt</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="sample">
+            <h4>sample</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-        <table>
-            <h3>selector มีกี่แบบอะไรบ้าง</h3>
-            <thead>
-                <tr>
-                    <th>ID Selectors</th>
-                    <th>Class Selectors</th>
-                    <th>TAG Selectors</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>การกำหนดชื่อของ element โดยจะมีได้แค่ element เดียวเท่านั้น
-                        สามารถเขียนได้โดยการเขียนชื่อ Selector ตามหลังเครื่องหมายชาร์ป (#)</td>
-                    <td>การกำหนดชื่อของ element โดยสามารถมีได้หลาย element
-                        เขียนได้โดยการ ตั้งชื่อ Selector ไว้หลังเครื่องหมายจุด หรือ Dot (.) </td>
-                    <td>TAG Selectors อ้างอิงกับชื่อ Tag ของ HTML โดยตรง เช่น &lt;p&gt; หมายความว่า
-                        ถ้าหากกำหนดคุณสมบัติให้แก่ TAG Selectors นี้แล้ว Tag ของ HTML ที่มีชื่อเดียวกับ Selectors นี้
-                        จะมีคุณสมบัติของ CSS เหมือนกันหมดทุก Tag ภายในเว็บเพจนั้น
-                        การเขียน TAG Selectors เราสามารถเขียนได้โดยการเขียนชื่อ TAG ของ HTML
-                        ลงไปโดยตรงหน้าเครื่องหมายปีกกา { ..... }</td>
-                </tr>
-            </tbody>
-        </table>
+            <ul>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, ratione excepturi.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, non beatae?</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, itaque cum.</li>
+            </ul>
 
-        <table>
-            <h3>combinator มีกี่แบบอะไรบ้าง</h3>
-            <thead>
-                <tr>
-                    <th>descendant selector (space)</th>
-                    <th>child selector (>)</th>
-                    <th>adjacent sibling selector (+)</th>
-                    <th>general sibling selector (~)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> a b = tag b ทั้งหมดที่อยู่ใน a </td>
-                    <td> a > b = tag b ที่เป็นลูกของ a </td>
-                    <td> a + b = tag b ที่อยู่ล่าง a และติดกับ a เท่านั้น </td>
-                    <td> a ~ b = tag b ที่อยู่ล่าง a ทุก tag เช่น h1~p { } คือ ให้กระทำการใดๆ กับ p ที่อยู่หลัง h1
-                        ไม่ว่าจะอยู่ในลำดับที่เท่าไร </td>
-                </tr>
-            </tbody>
-        </table>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-        <div class="adjacent">
-            <h4>adjacent sibling selector (+)</h4>
-            ให้กระทำการใดๆ กับ section ที่อยู่ต่อจาก section ที่เป็นพี่เท่านั้น<br><br>
+            <h4> adjacent sibling selector (+)</h4>
+            <p>ให้กระทำการใดๆ กับ section ที่อยู่ต่อจาก section ที่เป็นพี่เท่านั้น</p>
 
             ul + p { <br>
             color: red;<br>
-            }<br><br>
-            ในกรณีนี้ เฉพาะ paragraph แรกที่ติดต่อหลังจาก ul แต่ละตัวจะแสดงสีแดง
+            }<br>
+            <p>ในกรณีนี้ เฉพาะ paragraph แรกที่ติดต่อหลังจาก ul แต่ละตัวจะแสดงสีแดง</p>
         </div>
-
     </div>
 </body>
 
