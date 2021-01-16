@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review 4</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        th {
+            height: 30px;
+            font-size: 18px;
+            background-color: LightBlue;
+        }
+
+        td {
+            padding: 3px 13px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Display</th>
+                <th>grid </th>
+                <th>flex</th>
+                <th>justify & Align</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    inline : &lt;span&gt; อยู่บรรทัดเดียวกัน ไม่สามารถปรับแต่ง ความกว้าง ความสูงได้ <br>
+                    block: &lt;p&gt; อยู่คนละบรรทัด <br>
+                    contents : ทําให้ element นั้นกลายเป็น contents ไม่สามารถปรับ margin, padding, border, background
+                    ได้ <br>
+                    flex : การจัดรูปแบบ flex <br>
+                    grid : การจัดรูปแบบ grid <br>
+                    inline-(block, flex, grid, table) <br>
+                    run-in : block or inline ขี้นอยู่กับ เนื้อหา <br>
+                    table &lt;table&gt; , table-caption &lt;caption&gt; , table-column-group &lt;colgroup&gt; ,
+                    table-header-group &lt;thead&gt; , table-row-group &lt;tbody&gt; ,
+                    table-cell &lt;td&gt; , table-column &lt;col&gt; , table-row &lt;tr&gt; , none
+                </td>
+
+                <td>ใช้ grid เมื่อ items ด้านในเรามีการจัดเรียงตัวที่ไม่ได้มีแค่แถวเดียว แต่มีลักษณะเป็น column กับ row
+                    (2D)</td>
+                <td>ใช้ flex เมื่อ layout มีลักษณะการวางของต่างๆเป็นแถวเดียว ไม่แนวตั้งก็นอน (1D)</td>
+
+                <td>justify-content : value (flex) จัดการแนวนอน <br>
+                    Align ใช้กับ flex จัดการแนวตั้ง
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
