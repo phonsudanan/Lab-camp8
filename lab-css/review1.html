@@ -40,6 +40,12 @@
         ul+p {
             color: red;
         }
+
+        a:hover{
+            background-color: greenyellow;
+        }
+
+
     </style>
 </head>
 
@@ -51,19 +57,24 @@
                 <tr>
                     <th>CSS syntax ประกอบด้วย</th>
                     <th>การเขียน CSS</th>
-                    <th>selector</th>
-                    <th>combinator</th>
+                    <th>Selector</th>
+                    <th>Combinator</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
+                    <td><p>selector{property:value}</p>
                         <p>Selector คือ ส่วน HTML tag ที่เราต้องการจะให้แสดงผล เช่น &lt;table&gt;
                             ก็จะแสดงผลในส่วนของตาราง</p>
                         <p>Property คือ ส่วนของคุณสมบัติที่เราต้องการให้แสดง เช่น สีตัวอักษร , ชนิดตัวอักษร ,
                             ขนาดตัวอักษร</p>
                         <p>Value คือ ค่าที่เราต้องการให้แสดง เช่น ตัวอักษรสีแดง , ตัวอักษรแบบ tahoma , ตัวอักษรขนาด 12
                             pt</p>
+
+                        <p>table{border:1px solid #C00;} <br>
+                         Selector คือ table หมายถึง ต้องการกำหนดลักษณะให้กับแท็ก table <br>
+                         Property คือ border หมายถึง สิ่งที่ต้องการกำหนดให้กับ table นั่นก็คือ ขอบ(border) <br>
+                         Value คือ 1px หมายถึง 1px มีลักษณะเป็นเส้นเดียว solid มีสีเป็น C00 สีแดงเข้ม ๆ </p>
                     </td>
 
                     <td>
@@ -77,16 +88,12 @@
                     </td>
 
                     <td>
-                        <p>ID Selectors การกำหนดชื่อของ element โดยจะมีได้แค่ element เดียวเท่านั้น
-                            สามารถเขียนได้โดยการเขียนชื่อ Selector ตามหลังเครื่องหมายชาร์ป (#)</p>
-                        <p>Class Selectors การกำหนดชื่อของ element โดยสามารถมีได้หลาย element
-                            เขียนได้โดยการ ตั้งชื่อ Selector ไว้หลังเครื่องหมายจุด หรือ Dot (.)</p>
-                        <p>TAG Selectors TAG Selectors อ้างอิงกับชื่อ Tag ของ HTML โดยตรง เช่น &lt;p&gt; หมายความว่า
-                            ถ้าหากกำหนดคุณสมบัติให้แก่ TAG Selectors นี้แล้ว Tag ของ HTML ที่มีชื่อเดียวกับ Selectors
-                            นี้
-                            จะมีคุณสมบัติของ CSS เหมือนกันหมดทุก Tag ภายในเว็บเพจนั้น
-                            การเขียน TAG Selectors เราสามารถเขียนได้โดยการเขียนชื่อ TAG ของ HTML
-                            ลงไปโดยตรงหน้าเครื่องหมายปีกกา { ..... }</p>
+                        <p>ID Selectors : การกำหนดชื่อของ element โดยจะมีได้แค่ element เดียวเท่านั้น เขียนได้โดยการเขียนชื่อ Selector ตามหลังเครื่องหมายชาร์ป (#)</p>
+                        <p>Class Selectors : การกำหนดชื่อของ element โดยสามารถมีได้หลาย element เขียนได้โดยการ ตั้งชื่อ Selector ไว้หลังเครื่องหมายจุด หรือ Dot (.)</p>
+                        <p>Pseudo element : การกำหนดเฉพาะบางส่วนของ element</p>
+                        <p>Pseudo class : การกำหนดเฉพาะบางสถานะของ class</p>
+                        <p>Combinators : การกำหนดเงื่อนระหว่าง 2 selector</p>
+                        <p>Attribute selector : การกำหนดการเลือกชื่อ attribute ใน element</p>
                     </td>
 
                     <td>
@@ -105,6 +112,12 @@
 
         <div class="sample">
             <h3>sample</h3>
+            <h4> adjacent sibling selector (+)</h4>
+            <p>ให้กระทำการใดๆ กับ section ที่อยู่ต่อจาก section ที่เป็นพี่เท่านั้น</p>
+            ul + p { <br>
+                color: red;<br>
+                }<br>
+
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
@@ -116,15 +129,23 @@
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-            <h4> adjacent sibling selector (+)</h4>
-            <p>ให้กระทำการใดๆ กับ section ที่อยู่ต่อจาก section ที่เป็นพี่เท่านั้น</p>
-
-            ul + p { <br>
-            color: red;<br>
-            }<br>
-
+ 
             <p><span style="background-color: goldenrod;">ในกรณีนี้ เฉพาะ paragraph แรกที่ติดต่อหลังจาก ul แต่ละตัวจะแสดงสีแดง</span> </p>
+
+
+            <h4>Pseudo class</h4>
+            
+            a:hover{ <br>
+                background-color: greenyellow; <br>
+            } <br><br>
+
+            <a href="javascript:void(0)">LEFT</a> &nbsp;
+            <a href="javascript:void(0)">RIGHT</a>
+            
+            <p><span style="background-color: goldenrod;">element ที่ถูกเอาเมาส์ไปวาง จะมีสถานะ background สี greenyellow</span> </p>
+
+
+
         </div>
     </div>
 </body>
