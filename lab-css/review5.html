@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review 5</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        th {
+            height: 30px;
+            font-size: 18px;
+            background-color: LightBlue;
+        }
+
+        td {
+            padding: 3px 13px;
+            vertical-align: top;
+        }
+
+        .sample div {
+            border: 2px solid black;
+            margin: 20px 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .div1 {
+            position: fixed;
+            background-color: burlywood;
+            z-index: 5;
+        }
+
+        .div2 {
+            position: static;
+            background-color: rgb(135, 222, 186);
+            z-index: 1;
+        }
+
+        .div3 {
+            position: relative;
+            background-color: rgb(84, 112, 7);
+            z-index: 2;
+        }
+
+        .div4 {
+            position: absolute;
+            background-color: rgb(86, 90, 155);
+            left: 600px;
+            z-index: 4;
+        }
+
+        .div5 {
+            position: sticky;
+            background-color: rgb(250, 160, 108);
+            top: 0;
+            z-index: 3;
+        }
+
+        .sample p {
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>position</th>
+                <th>z-index</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <p>Property position ใน CSS นั้น จะมี value ดังนี้</p>
+                    <p>1.static นั้นถือเป็นค่าเริ่มต้นสำหรับ position</p>
+                    <p>2.relative แสดงผลต่อจาก ณ จุดที่มันอยู่ตรงนั้น “แบบตรงไปตรงมา” ซึ่ง position: relative;
+                        มีลักษณะคล้าย ๆ กับ static ต่างกันตรงที่
+                        relative นั้น เราสามารถใช้ top left bottom right ในการกำหนดตำแหน่งได้</p>
+                    <p>3.absolute จะแสดงผลเป็น “อิสระ” คือจะให้มันไปอยู่ตรงไหนก็ได้ ซึ่งมันจะอยู่แค่ภายใต้ element
+                        ที่ครอบมันอีกทีเท่านั้น</p>
+                    <p>4.fixed ทำหน้าที่คล้าย absolute เลย แต่มีแตกต่างกันที่ fixed นั้นจะใช้กับ relative
+                        เพื่อกำหนดกรอบของมันไม่ได้ และจะตรึงตัวเองอยู่ตรงนั้นเสมอ</p>
+                    <p>5.sticky การรวม relative กับ fixed ไว้ด้วยกัน โดยการกำหนด relative เพิ่มว่าจะให้ไป fix
+                        ที่ top หรือ bottom ทำให้เราเห็น block นั้นเลื่อนและถูกตรึงไว้เมื่อเรา เลื่อน scroll เมาส์ </p>
+                </td>
+
+                <td>
+                    <p>z-index คือการใช้จัดเรียง element ที่ซ้อนกันและต้องเป็น element ที่ถูกกำหนด position ไว้เท่านั้น
+                        ตัวเลขยิ่งมากก็จะอยู่บนสุด</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="sample">
+        <h2>sample position</h2>
+        <div class="div1">div 1 <br>position: fixed จะตรึงตัวเองอยู่ตรงนั้นเสมอ</div>
+        <div class="div2">div 2<br>position: static เป็นค่าเริ่มต้นสำหรับ positionเลื่อนตามหน้าเว็บปกติ </div>
+        <div class="div3">div 3<br>position: relative แสดงผลต่อจาก ณ จุดที่มันอยู่ตรงนั้น</div>
+        <div class="div4">div 4<br>position: absolute จะแสดงผลเป็น “อิสระ”</div>
+        <div class="div5">div 5<br>position: sticky การรวม relative กับ fixed ไว้ด้วยกัน โดยการกำหนด relative
+            เพิ่มว่าจะให้ไป fix ที่ top หรือ bottom ทำให้เราเห็น block นั้นเลื่อนและถูกตรีงไว้เมื่อเรา เลื่อน scroll
+            เมาส์</div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae perferendis odit totam ullam dicta
+            voluptatibus esse corrupti aliquid dignissimos, ipsa inventore! Nobis unde animi architecto quia ipsum
+            quis minus et quidem quo ullam deserunt veritatis, est consequatur ex amet vitae? Mollitia voluptatibus
+            vero corrupti nostrum ipsam ex deleniti sequi? Minus odit quas error modi consequuntur sint voluptatum,
+            excepturi repellat dolores ipsa, sunt unde reiciendis, velit iure eligendi est voluptatem doloremque
+            quibusdam laboriosam repudiandae quisquam. Porro ullam, dolor cum sint laboriosam, vitae corporis doloremque
+            atque, omnis nam itaque nemo. Nostrum in vel, modi rerum assumenda cupiditate aliquam reiciendis, nesciunt
+            doloribus atque alias, ab debitis iusto quas ipsum ex tempore laborum ea. Molestias ex sit voluptatem
+            aspernatur incidunt debitis iusto rerum reiciendis velit tenetur id ullam quasi amet, nisi quo quam dolorem
+            officia nesciunt placeat tempore, ipsa vitae unde deleniti maiores! Placeat sequi, reiciendis in ex nam
+            molestiae
+            necessitatibus commodi itaque eos dolores quia sit vero animi est qui tempora, sunt assumenda officia alias
+            porro
+            omnis quos nihil? Distinctio architecto cumque blanditiis et, repellat quis quaerat reiciendis
+            exercitationem
+            incidunt aperiam obcaecati minima? Laboriosam quia molestias voluptas sed quidem in. Facilis magni animi
+            reprehenderit
+            officia! Optio eveniet ea ullam, magni iusto minima impedit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam incidunt ducimus ratione,
+            quos dolores et ipsam. Quaerat tempore, quos velit, voluptatibus excepturi eveniet delectus repudiandae
+            reprehenderit in ipsum, officiis corrupti consectetur? Veritatis, quidem. Nam incidunt veritatis maxime amet
+            neque saepe temporibus soluta odio magnam alias. Fuga quod neque voluptates.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, aliquam dolorum eum et, ipsam eaque
+            reprehenderit voluptates ex porro omnis illum optio unde itaque ratione nihil numquam rem consectetur
+            reiciendis
+            ab quasi eligendi! Nisi dolor aperiam libero fuga ea labore nihil nam. Fuga natus iusto consequatur dolore
+            necessitatibus, ratione assumenda ut exercitationem, voluptate aliquid provident quasi soluta magni vero
+            deserunt
+            quas similique distinctio qui facere, dicta id? Tenetur aspernatur eaque explicabo nisi placeat saepe,
+            necessitatibus ratione pariatur corporis consequatur molestias quod, harum ipsa ullam, ex ad aut rerum
+            impedit
+            eius quam accusantium esse? Quibusdam aspernatur, rerum aliquid odio ad perspiciatis.</p>
+    </div>
+
+</body>
+
+</html>
